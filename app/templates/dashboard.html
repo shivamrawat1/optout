@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="dashboard-container">
+        <h1 class="mb-4">Newsletter Subscriptions</h1>
+        <p class="lead">Found in the last {{ timeframe }} days</p>
+
+        {% if unsubscribe_links %}
+            <div class="row">
+                {% for item in unsubscribe_links %}
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.sender }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ item.domain }}</h6>
+                                <p class="card-text">{{ item.subject }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="{{ item.url }}" target="_blank" class="btn btn-danger">
+                                        <i class="bi bi-box-arrow-up-right me-2"></i>Unsubscribe
+                                    </a>
+                                    <span class="badge bg-secondary">{{ item.source }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle me-2"></i>No newsletter subscriptions found in this time period.
+            </div>
+        {% endif %}
+
+        <div class="mt-4">
+            <a href="{{ url_for('auth.timeframe') }}" class="btn btn-outline-primary">
+                <i class="bi bi-arrow-left me-2"></i>Back to Timeframe Selection
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.card {
+    height: 100%;
+    transition: transform 0.2s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.badge {
+    font-size: 0.8em;
+}
+</style>
+{% endblock %} 

@@ -1,0 +1,124 @@
+body {
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+
+.login-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 30px;
+}
+
+.stats-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+}
+
+.login-btn,
+.unsubscribe-btn {
+    transition: all 0.2s;
+}
+
+.login-btn:hover,
+.unsubscribe-btn:hover {
+    transform: translateY(-2px);
+}
+
+.feature-list {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.feature-item {
+    margin: 10px 0;
+    color: #6c757d;
+}
+
+.icon {
+    margin-right: 10px;
+    color: #0d6efd;
+}
+
+.sender-info {
+    display: flex;
+    align-items: center;
+}
+
+.sender-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeframe-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+}
+
+.auth-form input {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.auth-form button {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.card {
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.badge {
+    padding: 0.5em 1em;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
