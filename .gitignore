@@ -1,5 +1,6 @@
 .env
 client_secrets.json
 __pycache__/
-
 .DS_Store
+*.pyc
+instance/
